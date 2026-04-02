@@ -22,7 +22,7 @@ export default function ProcessSection() {
                 <div className="@xl:grid-cols-2 mt-12 grid gap-4 *:p-8">
                     <Card
                         variant="mixed"
-                        className="row-span-2 grid grid-rows-subgrid border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
+                        className="row-span-2 grid grid-rows-subgrid border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-none">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">
                                 <Search className="size-5 text-zinc-900 dark:text-zinc-100" />
@@ -69,7 +69,7 @@ export default function ProcessSection() {
                     </Card>
                     <Card
                         variant="mixed"
-                        className="row-span-2 grid grid-rows-subgrid overflow-hidden border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
+                        className="row-span-2 grid grid-rows-subgrid overflow-hidden border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-none">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">
                                 <Layout className="size-5 text-zinc-900 dark:text-zinc-100" />
@@ -91,7 +91,7 @@ export default function ProcessSection() {
                     </Card>
                     <Card
                         variant="mixed"
-                        className="row-span-2 grid grid-rows-subgrid overflow-hidden border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
+                        className="row-span-2 grid grid-rows-subgrid overflow-hidden border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-none">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">
                                 <Code2 className="size-5 text-zinc-900 dark:text-zinc-100" />
@@ -140,7 +140,7 @@ export default function ProcessSection() {
                     </Card>
                     <Card
                         variant="mixed"
-                        className="row-span-2 grid grid-rows-subgrid border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
+                        className="row-span-2 grid grid-rows-subgrid border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50 transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-none">
                         <div className="space-y-3">
                             <div className="flex items-center gap-3">
                                 <Rocket className="size-5 text-zinc-900 dark:text-zinc-100" />

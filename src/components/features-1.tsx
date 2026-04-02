@@ -56,7 +56,9 @@ export default function Features() {
         </div>
         <div className="@min-4xl:grid-cols-3 mx-auto mt-8 grid gap-6 *:text-center md:mt-16">
           {SERVICES.map((service, index) => (
-            <Card key={index} className="group shadow-zinc-950/5">
+            <Card
+              key={index}
+              className="group shadow-zinc-950/5 transition-all duration-300 hover:shadow-2xl hover:shadow-zinc-200/50 dark:hover:shadow-none hover:-translate-y-1 hover:border-zinc-200 dark:hover:border-zinc-800 border border-transparent">
               <CardHeader className="pb-3">
                 <CardDecorator>
                   <service.icon className="size-6" aria-hidden />

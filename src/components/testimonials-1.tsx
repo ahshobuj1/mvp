@@ -43,7 +43,7 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="bg-white dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 space-y-6 rounded-3xl p-8 shadow-sm backdrop-blur-sm transition-all hover:border-zinc-200 dark:hover:border-zinc-700">
+                            className="bg-white dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 space-y-6 rounded-3xl p-8 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-200 dark:hover:border-zinc-700 hover:shadow-xl hover:shadow-zinc-200/50 dark:hover:shadow-none hover:-translate-y-1">
                             <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed font-outfit italic">
                                 "{testimonial.quote}"
                             </p>
@@ -72,6 +72,3 @@ export default function Testimonials() {
         </section>
     )
 }
-
-
-

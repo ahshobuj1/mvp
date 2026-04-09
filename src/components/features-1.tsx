@@ -1,6 +1,4 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Code, Server, Sparkles, Cloud, Database, Layout } from 'lucide-react';
-import { ReactNode } from 'react';
 
 const SERVICES = [
   {
@@ -8,86 +6,113 @@ const SERVICES = [
     description:
       'Designing intuitively beautiful and responsive user interfaces with Tailwind CSS that prioritize user engagement.',
     icon: Layout,
+    number: '01',
   },
   {
     title: 'Modern Web Development',
     description:
       'High-performance, SEO-optimized web applications built with React and Next.js for a seamless user experience.',
     icon: Code,
+    number: '02',
   },
   {
     title: 'Scalable Backend Systems',
     description:
       'Secure and reliable server-side logic using Node.js, NestJS, and Laravel to power your complex business processes.',
     icon: Server,
+    number: '03',
   },
   {
     title: 'AI-Driven Applications',
     description:
       'Elevating your business with custom AI integrations, leveraging OpenAI and modern LLMs to automate and innovate.',
     icon: Sparkles,
+    number: '04',
   },
   {
     title: 'Cloud & DevOps',
     description:
       'Optimizing deployments with AWS and Docker for maximum scalability, reliability, and security of your digital infrastructure.',
     icon: Cloud,
+    number: '05',
   },
   {
     title: 'Database Management',
     description:
       'Efficient data modelling and management using Prisma, MongoDB, and MySQL to ensure your data stays organized and secure.',
     icon: Database,
+    number: '06',
   },
 ];
 
+function ServiceCard({ service }: { service: (typeof SERVICES)[0] }) {
+  const Icon = service.icon;
+
+  return (
+    <div className="relative flex flex-col gap-4 p-8 border-r border-b border-white/10 transition-colors duration-300 hover:bg-white/[0.04] group overflow-hidden">
+      {/* Top accent line on hover */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-white scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
+
+      {/* Number */}
+      <span className="text-xs tracking-[0.2em] font-medium text-white/40 uppercase">
+        {service.number}
+      </span>
+
+      {/* Icon */}
+      <div className="w-11 h-11 flex items-center justify-center border border-white/20 bg-white/5 rounded-xl group-hover:border-white/40 group-hover:bg-white/10 transition-all duration-300">
+        <Icon size={18} className="text-white/75 group-hover:text-white transition-colors duration-300" />
+      </div>
+
+      {/* Title */}
+      <h3 className="text-2xl font-semibold text-white leading-snug">
+        {service.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-sm text-white/55 leading-relaxed font-light flex-1">
+        {service.description}
+      </p>
+    </div>
+  );
+}
+
 export default function Features() {
   return (
-    <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
-      <div className="@container mx-auto max-w-7xl px-6">
+    <section className="py-24 md:py-32">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center space-y-4 max-w-5xl mx-auto">
-          <h2 className="text-balance text-4xl font-semibold md:text-5xl tracking-tight text-zinc-900 dark:text-zinc-50 font-outfit">
-            Our Services
-          </h2>
-          <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto font-outfit">
-            From ideation to deployment, we build high-performance, scalable web
-            applications that drive your business forward.          </p>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+          <div className="space-y-4">
+
+
+            <div className="flex items-center gap-3">
+              <div className="w-6 h-px bg-white/40" />
+              <span className="text-xs tracking-[0.2em] uppercase text-white/50 font-medium">
+                What we offer
+              </span>
+            </div>
+
+
+            <h2 className="text-4xl md:text-5xl font-semibold text-white leading-tight tracking-tight">
+              Services built for<br />
+              <span className="text-zinc-600 dark:text-zinc-400">scale &amp; precision</span>
+            </h2>
+          </div>
+
+          <p className="text-sm text-white/50 leading-relaxed max-w-xs font-light">
+            From ideation to deployment — high-performance applications that drive your business forward.
+          </p>
         </div>
 
-        <div className="@min-4xl:grid-cols-3 mx-auto mt-8 grid gap-6 *:text-center md:mt-16">
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/10 rounded-2xl overflow-hidden">
           {SERVICES.map((service, index) => (
-            <Card
-              key={index}
-              className="group shadow-zinc-950/5 transition-all duration-300 hover:shadow-2xl hover:shadow-zinc-200/50 dark:hover:shadow-none hover:-translate-y-1 hover:border-zinc-200 dark:hover:border-zinc-800 border border-transparent">
-              <CardHeader className="pb-3">
-                <CardDecorator>
-                  <service.icon className="size-6" aria-hidden />
-                </CardDecorator>
-                <h3 className="mt-6 text-2xl font-medium">{service.title}</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
+
       </div>
     </section>
   );
 }
-
-const CardDecorator = ({ children }: { children: ReactNode }) => (
-  <div className="mask-radial-from-40% mask-radial-to-60% relative mx-auto size-36 duration-200 [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]">
-    <div
-      aria-hidden
-      className="absolute inset-0 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[24px_24px] dark:opacity-50"
-    />
-
-    <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-l border-t">
-      {children}
-    </div>
-  </div>
-);

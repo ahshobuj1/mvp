@@ -28,11 +28,12 @@ export default function HeroSection() {
   return (
     <>
       <HeroHeader />
+
       <main className="overflow-x-hidden">
         <section>
           <div className="">
-            <div className="aspect-2/3 relative z-10 flex flex-col justify-end px-6 lg:aspect-video">
-              <div className="mx-auto w-full max-w-7xl pb-6 lg:px-12 lg:pb-32">
+            <div className="aspect-2/3 relative z-10 flex flex-col justify-center px-6 lg:aspect-video">
+              <div className="mx-auto w-full max-w-7xl pt-12 lg:px-12 lg:pt-20">
                 <div className="max-w-lg">
                   <h1 className="text-balance text-5xl md:text-6xl xl:text-7xl ">
                     Build Stunning Websites That Drive Results
@@ -57,7 +58,7 @@ export default function HeroSection() {
                       asChild
                       size="lg"
                       variant="ghost"
-                      className="h-12 bg-green-500 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5">
+                      className="h-12 rounded-full px-5 text-base hover:bg-zinc-950/5 dark:hover:bg-white/5">
                       <Link href="#link">
                         <span className="text-nowrap">Request a Building</span>
                       </Link>

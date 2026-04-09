@@ -28,7 +28,6 @@ export default function HeroSection() {
   return (
     <>
       <HeroHeader />
-
       <main className="overflow-x-hidden">
         <section>
           <div className="">

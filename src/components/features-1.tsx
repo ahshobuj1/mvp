@@ -94,7 +94,7 @@ export default function Features() {
             </div>
 
 
-            <h2 className="text-4xl md:text-5xl font-semibold text-white leading-tight tracking-tight">
+            <h2 className="text-4xl capitalize md:text-5xl font-semibold text-white leading-tight tracking-tight">
               Services built for<br />
               <span className="text-zinc-600 dark:text-zinc-400">scale &amp; precision</span>
             </h2>

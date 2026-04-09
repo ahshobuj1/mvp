@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+
 export default function Stats() {
   return (
     <section className="bg-white dark:bg-zinc-950 @container pt-10 md:pt-16 border-t border-zinc-100 dark:border-zinc-900">
@@ -13,6 +14,7 @@ export default function Stats() {
             products that solve real business problems.
           </p>
         </div>
+
         <div className="@xl:grid-cols-3 mt-16 grid gap-12 text-sm">
           <div className="border-t border-zinc-100 dark:border-zinc-900 pt-8">
             <p className="text-zinc-500 dark:text-zinc-400 text-lg">
@@ -42,16 +44,24 @@ export default function Stats() {
           </div>
         </div>
       </div>
-      <div className="mask-radial-from-65% mask-radial-at-bottom mask-radial-[50%_100%] relative mx-auto max-w-5xl mt-16 dark:opacity-30 overflow-hidden">
-        <div className="bg-zinc-500/10 absolute inset-0 z-10 mix-blend-overlay pointer-events-none" />
+
+      {/* World map — removed dark:opacity-30, increased brightness */}
+      <div className="mask-radial-from-65% mask-radial-at-bottom mask-radial-[50%_100%] relative mx-auto max-w-5xl mt-16 overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1723307060937-b003478a2c03?q=80&w=2928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="global technology map representation"
-          className="dark:invert grayscale transition-all duration-700 hover:grayscale-0 hover:scale-[1.03] hover:brightness-110 cursor-crosshair"
+          className="grayscale dark:grayscale-6 dark:brightness-70 dark:contrast-100 transition-all duration-700 hover:scale-[1.03] cursor-crosshair"
           width={2928}
           height={1464}
         />
       </div>
+
+      {/* 
+      <div className="relative mx-auto max-w-2xl mt-16 flex justify-center overflow-hidden">
+        <div className="mask-radial-from-50% mask-radial-at-bottom">
+          <CobeGlobe />
+        </div>
+      </div> */}
     </section>
   );
 }

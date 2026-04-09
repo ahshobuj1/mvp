@@ -1,6 +1,6 @@
-import {Card, CardContent, CardHeader} from '@/components/ui/card';
-import {Code, Server, Sparkles, Cloud, Database, Layout} from 'lucide-react';
-import {ReactNode} from 'react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Code, Server, Sparkles, Cloud, Database, Layout } from 'lucide-react';
+import { ReactNode } from 'react';
 
 const SERVICES = [
   {
@@ -45,15 +45,16 @@ export default function Features() {
   return (
     <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
       <div className="@container mx-auto max-w-7xl px-6">
-        <div className="text-center">
-          <h2 className="text-balance text-4xl font-semibold lg:text-5xl">
+
+        <div className="text-center space-y-4 max-w-5xl mx-auto">
+          <h2 className="text-balance text-4xl font-semibold md:text-5xl tracking-tight text-zinc-900 dark:text-zinc-50 font-outfit">
             Our Services
           </h2>
-          <p className="mt-4 text-zinc-600 dark:text-zinc-400 text-lg">
+          <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto font-outfit">
             From ideation to deployment, we build high-performance, scalable web
-            applications that drive your business forward.
-          </p>
+            applications that drive your business forward.          </p>
         </div>
+
         <div className="@min-4xl:grid-cols-3 mx-auto mt-8 grid gap-6 *:text-center md:mt-16">
           {SERVICES.map((service, index) => (
             <Card
@@ -78,7 +79,7 @@ export default function Features() {
   );
 }
 
-const CardDecorator = ({children}: {children: ReactNode}) => (
+const CardDecorator = ({ children }: { children: ReactNode }) => (
   <div className="mask-radial-from-40% mask-radial-to-60% relative mx-auto size-36 duration-200 [--color-border:color-mix(in_oklab,var(--color-zinc-950)10%,transparent)] group-hover:[--color-border:color-mix(in_oklab,var(--color-zinc-950)20%,transparent)] dark:[--color-border:color-mix(in_oklab,var(--color-white)15%,transparent)] dark:group-hover:[--color-border:color-mix(in_oklab,var(--color-white)20%,transparent)]">
     <div
       aria-hidden

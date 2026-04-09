@@ -33,9 +33,9 @@ export default function DevelopmentProcess() {
                             <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Discovery</h3>
                         </div>
                         <div className="space-y-6">
-                            <p className="text-gray-700 text-lg md:text-xl leading-relaxed">We analyze all project requirements to understand your core business logic.</p>
-                            <p className="text-gray-500 text-lg md:text-xl leading-relaxed">Provide clear obligations and technical evaluations to start solutions together.</p>
-                            <p className="text-gray-200 text-lg md:text-xl leading-relaxed">Establish a strategic roadmap and clear project goals from day one.</p>
+                            <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl leading-relaxed">We analyze all project requirements to understand your core business logic.</p>
+                            <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl leading-relaxed">Provide clear obligations and technical evaluations to start solutions together.</p>
+                            <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl leading-relaxed">Establish a strategic roadmap and clear project goals from day one.</p>
                         </div>
                     </div>
                 </div>

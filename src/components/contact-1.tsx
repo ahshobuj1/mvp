@@ -72,6 +72,7 @@ export default function Contact() {
                                         placeholder="Enter your name"
                                         className="bg-transparent border-zinc-200 dark:border-zinc-800 focus:ring-zinc-500"
                                         required
+                                        suppressHydrationWarning
                                     />
                                 </div>
                                 <div className="space-y-2">
@@ -82,6 +83,7 @@ export default function Contact() {
                                         placeholder="you@company.com"
                                         className="bg-transparent border-zinc-200 dark:border-zinc-800 focus:ring-zinc-500"
                                         required
+                                        suppressHydrationWarning
                                     />
                                 </div>
                             </div>
@@ -103,6 +105,7 @@ export default function Contact() {
                                     rows={5}
                                     className="bg-transparent border-zinc-200 dark:border-zinc-800 focus:ring-zinc-500 min-h-[120px]"
                                     required
+                                    suppressHydrationWarning
                                 />
                             </div>
 

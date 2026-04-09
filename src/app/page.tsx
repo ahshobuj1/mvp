@@ -1,11 +1,12 @@
 import HeroSection from '@/components/hero-section';
 import Features from '@/components/features-1';
 import IntegrationsSection from '@/components/integrations-7';
-import ProcessSection from '@/components/features-2';
 import Stats from '@/components/stats-3';
 import FAQSection from '@/components/faqs-3';
 import Contact from '@/components/contact-1';
 import Testimonials from '@/components/testimonials-1';
+import DevelopmentProcess from '@/pages/DevelopmentProcess/DevelopmentProcess';
+
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <IntegrationsSection />
 
       <div id="solution">
-        <ProcessSection />
+        <DevelopmentProcess />
       </div>
 
       <div id="stats">

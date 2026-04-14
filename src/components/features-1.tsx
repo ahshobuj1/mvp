@@ -1,4 +1,4 @@
-import { Code, Server, Sparkles, Cloud, Database, Layout } from 'lucide-react';
+import {Code, Server, Sparkles, Cloud, Database, Layout} from 'lucide-react';
 
 const SERVICES = [
   {
@@ -45,13 +45,13 @@ const SERVICES = [
   },
 ];
 
-function ServiceCard({ service }: { service: (typeof SERVICES)[0] }) {
+function ServiceCard({service}: {service: (typeof SERVICES)[0]}) {
   const Icon = service.icon;
 
   return (
-    <div className="relative flex flex-col gap-4 p-8 border-r border-b border-white/10 transition-colors duration-300 hover:bg-white/[0.04] group overflow-hidden">
-      {/* Top accent line on hover */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-white scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
+    <div className="relative flex flex-col gap-4 p-8 border-r border-b border-white/10 transition-colors duration-300 hover:bg-white/4 group overflow-hidden">
+      {/* Top accent line on hover - Changed bg-white to bg-primary here */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-primary scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
 
       {/* Number */}
       <span className="text-xs tracking-[0.2em] font-medium text-white/40 uppercase">
@@ -59,12 +59,15 @@ function ServiceCard({ service }: { service: (typeof SERVICES)[0] }) {
       </span>
 
       {/* Icon */}
-      <div className="w-11 h-11 flex items-center justify-center border border-white/20 bg-white/5 rounded-xl group-hover:border-white/40 group-hover:bg-white/10 transition-all duration-300">
-        <Icon size={18} className="text-white/75 group-hover:text-white transition-colors duration-300" />
+      <div className="w-11 h-11 flex items-center justify-center border border-primary bg-white/5 rounded-xl group-hover:border-primary/40 group-hover:bg-white/10 transition-all duration-300">
+        <Icon
+          size={18}
+          className="text-primary group-hover:text-primary/80 transition-colors duration-300"
+        />
       </div>
 
       {/* Title */}
-      <h3 className="text-2xl font-semibold text-white leading-snug">
+      <h3 className="text-2xl font-semibold text-white/90 leading-snug">
         {service.title}
       </h3>
 
@@ -80,28 +83,28 @@ export default function Features() {
   return (
     <section className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
           <div className="space-y-4">
-
-
             <div className="flex items-center gap-3">
-              <div className="w-6 h-px bg-white/40" />
-              <span className="text-xs tracking-[0.2em] uppercase text-white/50 font-medium">
+              <div className="w-6 h-px bg-primary" />
+              <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">
                 What we offer
               </span>
             </div>
 
-
             <h2 className="text-4xl capitalize md:text-5xl font-semibold text-white leading-tight tracking-tight">
-              Services built for<br />
-              <span className="text-zinc-600 dark:text-zinc-400">scale &amp; precision</span>
+              Services built for
+              <br />
+              <span className="text-zinc-600 dark:text-zinc-400">
+                scale &amp; precision
+              </span>
             </h2>
           </div>
 
           <p className="text-sm text-white/50 leading-relaxed max-w-xs font-light">
-            From ideation to deployment — high-performance applications that drive your business forward.
+            From ideation to deployment — high-performance applications that
+            drive your business forward.
           </p>
         </div>
 
@@ -111,7 +114,6 @@ export default function Features() {
             <ServiceCard key={index} service={service} />
           ))}
         </div>
-
       </div>
     </section>
   );

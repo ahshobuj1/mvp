@@ -1,12 +1,11 @@
 import Image from 'next/image';
 
-
 export default function Stats() {
   return (
-    <section className="bg-white dark:bg-zinc-950 @container pt-10 md:pt-16 border-t border-zinc-100 dark:border-zinc-900">
+    <section className="bg-white dark:bg-background @container pt-10 md:pt-16 border-t border-zinc-100 dark:border-gray-500">
       <div className="mx-auto max-w-4xl px-6 text-center">
         <div className="space-y-6">
-          <h2 className="text-balance text-4xl font-semibold md:text-5xl tracking-tight text-zinc-900 dark:text-zinc-50 font-outfit">
+          <h2 className="text-balance text-4xl font-semibold md:text-5xl tracking-tight text-zinc-900 dark:text-white/90 font-outfit">
             Building Modern Software for Your Success
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed max-w-2xl mx-auto">
@@ -16,27 +15,27 @@ export default function Stats() {
         </div>
 
         <div className="@xl:grid-cols-3 mt-16 grid gap-12 text-sm">
-          <div className="border-t border-zinc-100 dark:border-zinc-900 pt-8">
+          <div className="border-t border-zinc-100 dark:border-gray-500 pt-8">
             <p className="text-zinc-500 dark:text-zinc-400 text-lg">
-              <span className="text-zinc-950 dark:text-zinc-50 font-semibold block text-3xl mb-1">
+              <span className="text-zinc-950 dark:text-primary font-semibold block text-3xl mb-1">
                 50+
               </span>{' '}
               Projects completed and delivered.
             </p>
           </div>
 
-          <div className="border-t border-zinc-100 dark:border-zinc-900 pt-8">
+          <div className="border-t border-zinc-100 dark:border-gray-500 pt-8">
             <p className="text-zinc-500 dark:text-zinc-400 text-lg">
-              <span className="text-zinc-950 dark:text-zinc-50 font-semibold block text-3xl mb-1">
+              <span className="text-zinc-950 dark:text-primary font-semibold block text-3xl mb-1">
                 15+
               </span>{' '}
               Happy clients from around the world.
             </p>
           </div>
 
-          <div className="border-t border-zinc-100 dark:border-zinc-900 pt-8">
+          <div className="border-t border-zinc-100 dark:border-gray-500 pt-8">
             <p className="text-zinc-500 dark:text-zinc-400 text-lg">
-              <span className="text-zinc-950 dark:text-zinc-50 font-semibold block text-3xl mb-1">
+              <span className="text-zinc-950 dark:text-primary font-semibold block text-3xl mb-1">
                 Top Rated
               </span>{' '}
               Trusted by our partners daily.

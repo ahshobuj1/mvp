@@ -1,22 +1,22 @@
 'use client';
 import Link from 'next/link';
-import { Logo } from '@/components/logo';
-import { Menu, X } from 'lucide-react';
+import {Logo} from '@/components/logo';
+import {Menu, X} from 'lucide-react';
 import React from 'react';
-import { useScroll, motion } from 'motion/react';
-import { cn } from '@/lib/utils';
+import {useScroll, motion} from 'motion/react';
+import {cn} from '@/lib/utils';
 
 const menuItems = [
-  { name: 'Features', href: '#features' },
-  { name: 'Solution', href: '#solution' },
-  { name: 'Stats', href: '#stats' },
-  { name: 'About', href: '#about' },
+  {name: 'Features', href: '#features'},
+  {name: 'Solution', href: '#solution'},
+  {name: 'Stats', href: '#stats'},
+  {name: 'About', href: '#about'},
 ];
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
-  const { scrollYProgress } = useScroll();
+  const {scrollYProgress} = useScroll();
 
   React.useEffect(() => {
     const unsubscribe = scrollYProgress.on('change', (latest) => {
@@ -34,7 +34,7 @@ export const HeroHeader = () => {
           className={cn(
             'mx-auto max-w-7xl rounded-full px-6 transition-all duration-300 lg:px-12',
             scrolled &&
-            'bg-background/50 backdrop-blur-2xl border border-white/10 shadow-lg',
+              'bg-background/50 backdrop-blur-2xl border border-white/10 shadow-lg',
           )}>
           <motion.div
             key={1}
@@ -58,7 +58,7 @@ export const HeroHeader = () => {
                   <li key={index}>
                     <Link
                       href={item.href}
-                      className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors duration-200 text-lg">
+                      className="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-primary transition-colors duration-200 text-lg">
                       {item.name}
                     </Link>
                   </li>
@@ -96,7 +96,7 @@ export const HeroHeader = () => {
           <motion.div
             initial={false}
             animate={
-              menuState ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }
+              menuState ? {height: 'auto', opacity: 1} : {height: 0, opacity: 0}
             }
             className="lg:hidden overflow-hidden bg-background rounded-3xl mb-4 px-2">
             <ul className="space-y-4 pb-8 pt-4">

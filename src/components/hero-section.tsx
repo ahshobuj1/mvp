@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { HeroHeader } from './header';
-import { InfiniteSlider } from '@/components/ui/infinite-slider';
-import { ProgressiveBlur } from '@/components/ui/progressive-blur';
-import { ChevronRight } from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {HeroHeader} from './header';
+import {InfiniteSlider} from '@/components/ui/infinite-slider';
+import {ProgressiveBlur} from '@/components/ui/progressive-blur';
+import {ChevronRight} from 'lucide-react';
 import {
   SiReact,
   SiNextdotjs,
@@ -22,16 +22,18 @@ import {
   SiDocker,
   SiOpenai,
 } from 'react-icons/si';
-import { FaAws } from 'react-icons/fa';
+import {FaAws} from 'react-icons/fa';
 
 export default function HeroSection() {
   return (
     <>
       <HeroHeader />
+
       <main className="overflow-x-hidden">
-        <section>
-          <div className="">
-            <div className="aspect-2/3 relative z-10 flex flex-col justify-center px-6 lg:aspect-video">
+        <section className="bg-background">
+          <div className="relative">
+            {/* Text Content */}
+            <div className="relative z-10 flex min-h-[70vh] flex-col justify-center px-6 lg:min-h-[85vh]">
               <div className="mx-auto w-full max-w-7xl pt-12 lg:px-12 lg:pt-20">
                 <div className="max-w-lg">
                   <h1 className="text-balance text-5xl md:text-6xl xl:text-7xl ">
@@ -46,7 +48,7 @@ export default function HeroSection() {
                     <Button
                       asChild
                       size="lg"
-                      className="h-12 rounded-full pl-5 pr-3 text-base bg-white text-black">
+                      className="h-12 rounded-full pl-5 pr-3 text-base bg-primary text-white/80">
                       <Link href="#link">
                         <span className="text-nowrap">Start Building</span>
                         <ChevronRight className="ml-1" />
@@ -66,18 +68,25 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-            <div className="aspect-2/3 pointer-events-none absolute inset-1 overflow-hidden rounded-3xl border border-black/10 lg:aspect-video lg:rounded-[3rem] dark:border-white/5">
+
+            {/* Seamless Blended Video Background */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="not-dark:invert size-full -scale-x-100 object-cover"
+                className="not-dark:invert size-full -scale-x-100 object-contain mix-blend-screen opacity"
                 src="https://videos.pexels.com/video-files/35968183/15249566_1920_1080_30fps.mp4"></video>
+
+              {/* Magic Gradients to fade edges into background */}
+              <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-background"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-background via-transparent to-background"></div>
             </div>
           </div>
         </section>
-        <section className="bg-background py-6">
+
+        <section className="bg-background py-6 relative z-10">
           <div className="group relative m-auto max-w-7xl px-6">
             <div className="flex flex-col items-center md:flex-row">
               <div className="md:max-w-44 md:border-r md:pr-6">
@@ -153,9 +162,8 @@ export default function HeroSection() {
                   </div>
                 </InfiniteSlider>
 
-                {/* Fixed gradient classes below */}
-                <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
-                <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
+                <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20 pointer-events-none"></div>
+                <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20 pointer-events-none"></div>
                 <ProgressiveBlur
                   className="pointer-events-none absolute left-0 top-0 h-full w-20"
                   direction="left"

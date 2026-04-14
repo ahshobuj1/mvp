@@ -7,10 +7,9 @@ import Contact from '@/components/contact-1';
 import Testimonials from '@/components/testimonials-1';
 import DevelopmentProcess from '@/pages/DevelopmentProcess/DevelopmentProcess';
 
-
 export default function Home() {
   return (
-    <div className="bg-black text-white relative min-h-screen font-outfit">
+    <div className="text-white relative min-h-screen font-outfit">
       <HeroSection />
 
       <div id="features">
